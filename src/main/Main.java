@@ -1,11 +1,10 @@
 package main;
 
 import com.sun.net.httpserver.HttpServer;
+import main.service.*;
 import main.util.ApiKeyFilter;
-import main.service.VillaService;
-import main.service.CustomerService;
-import main.service.VoucherService;
 
+import java.io.OutputStream;
 import java.net.InetSocketAddress;
 
 public class Main {
@@ -15,33 +14,87 @@ public class Main {
         int port = 8080;
         HttpServer server = HttpServer.create(new InetSocketAddress(port), 0);
 
-        // Villa
+        // Villas - RoomTypes - Bookings - Reviews
         server.createContext("/villas", exchange -> {
-            if (!ApiKeyFilter.check(exchange, API_KEY))
-                return;
+            try {
+                if (!ApiKeyFilter.check(exchange, API_KEY)) return;
 
-            VillaService.handle(exchange);
+                String[] segments = exchange.getRequestURI().getPath().split("/");
+
+                if (segments.length >= 4) {
+                    if ("rooms".equalsIgnoreCase(segments[3])) {
+                        RoomTypeService.handle(exchange);
+                        return;
+                    } else if ("bookings".equalsIgnoreCase(segments[3])) {
+                        BookingService.handle(exchange);
+                        return;
+                    } else if ("reviews".equalsIgnoreCase(segments[3])) {
+                        ReviewService.handle(exchange);
+                        return;
+                    }
+                }
+
+                VillaService.handle(exchange);
+            } catch (Exception e) {
+                e.printStackTrace();
+                sendServerError(exchange);
+            }
         });
 
-        // Customer
+        // Customers - Bookings - Reviews
         server.createContext("/customers", exchange -> {
-            if (!ApiKeyFilter.check(exchange, API_KEY))
-                return;
+            try {
+                if (!ApiKeyFilter.check(exchange, API_KEY)) return;
 
-            CustomerService.handle(exchange);
+                String[] segments = exchange.getRequestURI().getPath().split("/");
+
+                if (segments.length >= 4) {
+                    if ("bookings".equalsIgnoreCase(segments[3])) {
+                        // handle POST /customers/{cid}/bookings/{bid}/reviews
+                        if (segments.length >= 6 && "reviews".equalsIgnoreCase(segments[5])) {
+                            ReviewService.handle(exchange);
+                            return;
+                        }
+                        BookingService.handle(exchange);
+                        return;
+                    } else if ("reviews".equalsIgnoreCase(segments[3])) {
+                        ReviewService.handle(exchange);
+                        return;
+                    }
+                }
+
+                CustomerService.handle(exchange);
+            } catch (Exception e) {
+                e.printStackTrace();
+                sendServerError(exchange);
+            }
         });
 
-        // Voucher
+        // Vouchers
         server.createContext("/vouchers", exchange -> {
-            if (!ApiKeyFilter.check(exchange, API_KEY))
-                return;
-
-            VoucherService.handle(exchange);
+            try {
+                if (!ApiKeyFilter.check(exchange, API_KEY)) return;
+                VoucherService.handle(exchange);
+            } catch (Exception e) {
+                e.printStackTrace();
+                sendServerError(exchange);
+            }
         });
 
-        server.setExecutor(null); // default
+        server.setExecutor(null);
         server.start();
-
         System.out.println("Villa Booking API is running at http://localhost:" + port);
+        System.in.read(); // prevent exit
+    }
+
+    private static void sendServerError(com.sun.net.httpserver.HttpExchange exchange) {
+        try {
+            String error = "{\"error\":\"Internal server error\"}";
+            exchange.getResponseHeaders().set("Content-Type", "application/json");
+            exchange.sendResponseHeaders(500, error.length());
+            OutputStream os = exchange.getResponseBody();
+            os.write(error.getBytes());
+            os.close();
+        } catch (Exception ignored) {}
     }
 }
