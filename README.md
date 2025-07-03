@@ -54,8 +54,62 @@ Persyaratan Sistem
 
 ### Villa
 
-#### Menambahkan data vila
-*Request:*
+#### 1. Daftar semua vila
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar semua vila](https://github.com/user-attachments/assets/c8032ce0-17c7-4b53-9088-fcbd4703bd29)
+
+#### 2. Informasi detail suatu vila pada vila yang memiliki id 2
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas/2
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Informasi detail suatu vila pada vila yang memiliki id 2](https://github.com/user-attachments/assets/22e111d4-0f8f-4964-8364-a51422ff26c6)
+
+#### 3. Informasi kamar suatu vila yang memiliki id 1, lengkap dengan fasilitas dan harga
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas/1/rooms
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Informasi kamar suatu vila yang memiliki id 1, lengkap dengan fasilitas dan harga](https://github.com/user-attachments/assets/ad1cb687-1bf9-42bc-8bca-117bed5cf840)
+
+#### 4. Daftar semua booking pada suatu vila yang memiliki id 1
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas/1/bookings
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar semua booking pada suatu vila yang memiliki id 1](https://github.com/user-attachments/assets/9a28c6f6-027f-4414-bc48-8994ba070e37)
+
+#### 5. Daftar semua review pada suatu vila yang memiliki id 2
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas/2/reviews
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar semua review pada suatu vila yang memiliki id 2](https://github.com/user-attachments/assets/26defe1a-5da3-4698-a065-f7742f3eb5b2)
+
+#### 6. Pencarian ketersediaan vila berdasarkan tanggal check-in dan checkout
+Request:
+- Method: GET
+- URL: http://localhost:8080/villas?ci_date=2025-07-05&co_date=2025-07-12
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Pencarian ketersediaan vila berdasarkan tanggal check-in dan checkout](https://github.com/user-attachments/assets/b2a62eea-66ae-444a-b15c-f4eee8647092)
+
+#### 7. Menambahkan data vila
+Request:
 - Method: POST
 - URL: http://localhost:8080/villas
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -66,11 +120,11 @@ Persyaratan Sistem
   "address": "Jl. Merapi No.1"<br>
 }
 
-*Dokumentasi:*
+Dokumentasi:
 ![Menambah data vila](https://github.com/user-attachments/assets/df524389-1e05-4f53-b30d-0ba0c553f795)
 
-#### Menambahkan tipe kamar pada vila
-*Request:*
+#### 8. Menambahkan tipe kamar pada vila yang memiliki id 1
+Request:
 - Method: POST
 - URL: http://localhost:8080/villas/1/rooms
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -90,13 +144,49 @@ Persyaratan Sistem
   "hasFridge": false<br>
 }
 
-*Dokumentasi:*
-![Menambahkan tipe kamar pada vila](https://github.com/user-attachments/assets/c522a069-b5f4-4ece-8da8-c31aa0c868e0)
+Dokumentasi:
+![Menambahkan tipe kamar pada vila yang memiliki id 1](https://github.com/user-attachments/assets/c522a069-b5f4-4ece-8da8-c31aa0c868e0)
 
 ### Customer
 
-#### Menambahkan customer baru (registrasi customer)
-*Request:*
+#### 1. Daftar semua customer
+Request:
+- Method: GET
+- URL: http://localhost:8080/customers
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar semua customer](https://github.com/user-attachments/assets/f7ec20ea-0b43-4ad5-a9b9-68be844a96b5)
+
+#### 2. Informasi detail seorang customer yang memiliki id 1
+Request:
+- Method: GET
+- URL: http://localhost:8080/customers/1
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Informasi detail seorang customer yang memiliki id 1](https://github.com/user-attachments/assets/28927913-801b-4397-a553-a2759f2c8fbd)
+
+#### 3. Daftar booking yang telah dilakukan oleh seorang customer yang memiliki id 2
+Request:
+- Method: GET
+- URL: http://localhost:8080/customers/2/bookings
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar booking yang telah dilakukan oleh seorang customer yang memiliki id 2](https://github.com/user-attachments/assets/5ab1d733-ba96-4c1d-afc8-e104e92eb794)
+
+#### 4. Daftar ulasan yang telah diberikan oleh customer yang memiliki id 3
+Request:
+- Method: GET
+- URL: http://localhost:8080/customers/3/reviews
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar ulasan yang telah diberikan oleh customer yang memiliki id 3](https://github.com/user-attachments/assets/9778663b-669a-46d5-b1f8-78a6e1dd18eb)
+
+#### 5. Menambahkan customer baru (registrasi customer)
+Request:
 - Method: POST
 - URL: http://localhost:8080/customers
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -107,11 +197,11 @@ Persyaratan Sistem
   "phone": "0811111111"<br>
 }
 
-*Dokumentasi:*
+Dokumentasi:
 ![Menambahkan customer baru (registrasi customer)](https://github.com/user-attachments/assets/596d93d7-7b2c-4ee5-9c29-a721f764a641)
 
-#### Customer melakukan pemesanan vila
-*Request:*
+#### 6. Customer melakukan pemesanan vila
+Request:
 - Method: POST
 - URL: http://localhost:8080/customers/1/bookings
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -129,11 +219,11 @@ Persyaratan Sistem
 "hasCheckedOut": true<br>
 }
 
-*Dokumentasi:*
+Dokumentasi:
 ![Customer melakukan pemesanan vila](https://github.com/user-attachments/assets/760bcab4-6526-4bf9-aadc-ddbae1217043)
 
-#### Customer memberikan ulasan pada vila (berdasarkan informasi booking)
-*Request:*
+#### 7. Customer memberikan ulasan pada vila (berdasarkan informasi booking)
+Request:
 - Method: POST
 - URL: http://localhost:8080/customers/1/bookings/1/reviews
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -145,13 +235,32 @@ Persyaratan Sistem
   "content": "Villa bersih, staf ramah, dan pemandangan luar biasa. Akan kembali lagi!"<br>
 }
 
-*Dokumentasi:*
+Dokumentasi:
 ![Customer memberikan ulasan pada vila (berdasarkan informasi booking)](https://github.com/user-attachments/assets/6f282cb5-0e71-43c2-8f55-da83d720bd0f)
 
 ### Voucher
 
+#### 1. Daftar semua vouchers
+Request:
+- Method: GET
+- URL: http://localhost:8080/vouchers
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Daftar semua vouchers](https://github.com/user-attachments/assets/94699da5-cbca-4f52-a715-c1ec61f1b971)
+
+#### 2. Informasi detail suatu voucher yang memiliki id 2
+Request:
+
+- Method: GET
+- URL: http://localhost:8080/vouchers/2
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Informasi detail suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/8240849e-670f-4455-8f4d-8e0f7e8dab51)
+
 #### Membuat voucher baru
-*Request:*
+Request:
 - Method: POST
 - URL: http://localhost:8080/vouchers
 - Headers: X-API-Key: villa-booking-api-key-2024
@@ -164,5 +273,5 @@ Persyaratan Sistem
   "endDate": "2025-07-31 23:59:59"<br>
 }
 
-*Dokumentasi:*
+Dokumentasi:
 ![Membuat voucher baru](https://github.com/user-attachments/assets/c007042f-f962-4842-8220-dbe9d7b4499c)
