@@ -1,7 +1,21 @@
 # API Pemesanan Vila Sederhana
+Mata Kuliah: Pemrograman Berorientasi Objek  
+Dosen: Wayan Oger Vihikan, S.T.I, M.I.T.  
+Semester: 2  
+Tahun: 2025
 
 ## Deskripsi Proyek
-Sistem pemesanan villa sederhana berbasis REST API menggunakan Java HttpServer dan SQLite. Proyek ini dibuat sebagai tugas mata kuliah PBO II.
+API Pemesanan Vila Sederhana adalah aplikasi RESTful API yang dibangun menggunakan bahasa pemrograman Java tanpa framework eksternal seperti Spring, dan memanfaatkan SQLite sebagai basis datanya. Proyek ini dirancang untuk memenuhi kebutuhan sistem reservasi vila secara digital dengan fitur-fitur inti seperti manajemen vila, tipe kamar, customer, booking, voucher, dan review.
+Aplikasi ini memungkinkan pengguna untuk:
+- Menambahkan, melihat, memperbarui, dan menghapus data vila beserta tipe kamarnya.
+- Mencari vila yang tersedia berdasarkan tanggal check-in dan check-out.
+- Menambahkan customer dan mengelola informasi mereka.
+- Membuat pemesanan kamar oleh customer, dengan opsi menggunakan voucher diskon.
+- Melakukan proses check-in dan check-out atas pemesanan.
+- Memberikan review oleh customer terhadap pengalaman menginap mereka.
+
+API ini dibangun dengan memanfaatkan Java HttpServer bawaan (tanpa framework web tambahan), dilengkapi dengan validasi input, error handling, dan dukungan header autentikasi melalui API Key.<br>
+Proyek ini dikembangkan sebagai tugas akhir mata kuliah Pemrograman Berorientasi Objek, dengan pendekatan modular (berbasis package), prinsip pemisahan concern (model, service, repository, util), dan pendekatan CRUD berbasis URL path dan method HTTP standar (GET, POST, PUT, DELETE).
 
 ## Anggota Kelompok
 | NIM | Nama |
@@ -16,9 +30,18 @@ Persyaratan Sistem
 - Java JDK 11 atau lebih tinggi
 - SQLite
 - Postman (untuk testing)
-#
+
+Port & API Key
 - Server berjalan di http://localhost:8080
 - Autentikasi : X-API-Key: villa-booking-api-key-2024
+
+## Database
+- villas
+- room_types
+- customers
+- bookings
+- reviews
+- vouchers
 
 ## API Endpoints
 | Entitas | Method | Endpoint | Deskripsi |
@@ -49,6 +72,15 @@ Persyaratan Sistem
 || POST | /vouchers | Membuat voucher baru |
 || PUT | /vouchers/{id} | Mengubah data suatu voucher |
 || DELETE | /vouchers/{id} | Menghapus data suatu voucher |
+
+## HTTP status
+- [200 OK] Permintaan berhasil.
+- [201 Created] Resource berhasil dibuat.
+- [400 Bad Request] Permintaan tidak valid biasanya karena input JSON salah atau data tidak lengkap.
+- [401 Unauthorized] API key tidak disertakan atau tidak valid.
+- [404 Not Found] Resource tidak ditemukan.
+- [405 Method Not Allowed] Endpoint valid, tapi method-nya tidak sesuai.
+- [500 Internal Server Error] Terjadi error tak terduga di sisi server.
 
 ## Test Menggunakan Postman
 
