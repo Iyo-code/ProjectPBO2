@@ -1,4 +1,4 @@
-# API Pemesanan Vila Sederhana (PBO_TUGAS2)
+# API Pemesanan Vila Sederhana
 
 ## Deskripsi Proyek
 Sistem pemesanan villa sederhana berbasis REST API menggunakan Java HttpServer dan SQLite. Proyek ini dibuat sebagai tugas mata kuliah PBO II.
