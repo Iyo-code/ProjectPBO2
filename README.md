@@ -147,6 +147,65 @@ Request:
 Dokumentasi:
 ![Menambahkan tipe kamar pada vila yang memiliki id 1](https://github.com/user-attachments/assets/c522a069-b5f4-4ece-8da8-c31aa0c868e0)
 
+#### 9. Mengubah data suatu vila yang memiliki id 5
+Request:
+- Method: PUT
+- URL: http://localhost:8080/villas/5
+- Headers: X-API-Key: villa-booking-api-key-2024
+- Body: json<br>
+{<br>
+  "name": "Villa Mawar Indah",<br>
+  "description": "Villa dengan taman bunga berwarna-warni dan udara segar.",<br>
+  "address": "Jl. Mawar No.5, Bedugul"<br>
+}
+
+Dokumentasi:
+![Mengubah data suatu vila yang memiliki id 5](https://github.com/user-attachments/assets/fd8d06df-13e5-4f3e-8006-bd27b0927e12)
+
+#### 10. Mengubah informasi kamar yang memiliki id 1 pada vila yang memiliki id 5
+Request:
+- Method: PUT
+- URL: http://localhost:8080/villas/5/rooms/1
+- Headers: X-API-Key: villa-booking-api-key-2024
+- Body: json<br>
+{<br>
+"id": 1,<br>
+"villa": 5,<br>
+"name": "Super Deluxe Room",<br>
+"quantity": 3,<br>
+"capacity": 4,<br>
+"price": 1200000,<br>
+"bedSize": "King",<br>
+"hasDesk": true,<br>
+"hasAc": true,<br>
+"hasTv": true,<br>
+"hasWifi": true,<br>
+"hasShower": true,<br>
+"hasHotwater": true,<br>
+"hasFridge": true<br>
+}
+
+Dokumentasi:
+![Mengubah informasi kamar yang memiliki id 1 pada vila yang memiliki id 5](https://github.com/user-attachments/assets/e455dea9-cc07-4b47-b6e7-357074db1261)
+
+#### 11. Menghapus kamar yang memiliki id 1 pada vila yang memiliki id 5
+Request:
+- Method: DELETE
+- URL: http://localhost:8080/villas/5/rooms/1
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Menghapus kamar yang memiliki id 1 pada vila yang memiliki id 5](https://github.com/user-attachments/assets/6be0eace-5bbb-40bc-9af6-bb77990a0def)
+
+#### 12. Menghapus suatu vila yang memiliki id 5
+Request:
+- Method: DELETE
+- URL: http://localhost:8080/villas/5
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Menghapus suatu vila yang memiliki id 5](https://github.com/user-attachments/assets/61ab5da7-f977-4157-b140-5a22f656c5af)
+
 ### Customer
 
 #### 1. Daftar semua customer
@@ -238,6 +297,30 @@ Request:
 Dokumentasi:
 ![Customer memberikan ulasan pada vila (berdasarkan informasi booking)](https://github.com/user-attachments/assets/6f282cb5-0e71-43c2-8f55-da83d720bd0f)
 
+#### 8. Mengubah seorang customer yang memiliki id 3
+Request:
+- Method: PUT
+- URL: http://localhost:8080/customers/3
+- Headers: X-API-Key: villa-booking-api-key-2024
+- Body: json<br>
+{<br>
+  "name": "Citra Dewi Lestari",<br>
+  "email": "citra.lestari@example.com",<br>
+  "phone": "081234567899"
+}
+
+Dokumentasi:
+![Mengubah seorang customer yang memiliki id 3](https://github.com/user-attachments/assets/d99ccc88-669e-4543-93f6-e83b3b0b0cb4)
+
+#### 9. Menghapus seorang customer yang memiliki id 4
+Request:
+- Method: DELETE
+- URL: http://localhost:8080/customers/4
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Menghapus seorang customer yang memiliki id 4](https://github.com/user-attachments/assets/39c406cc-275e-418b-bcc4-64687928965b)
+
 ### Voucher
 
 #### 1. Daftar semua vouchers
@@ -259,7 +342,7 @@ Request:
 Dokumentasi:
 ![Informasi detail suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/8240849e-670f-4455-8f4d-8e0f7e8dab51)
 
-#### Membuat voucher baru
+#### 3. Membuat voucher baru
 Request:
 - Method: POST
 - URL: http://localhost:8080/vouchers
@@ -275,3 +358,30 @@ Request:
 
 Dokumentasi:
 ![Membuat voucher baru](https://github.com/user-attachments/assets/c007042f-f962-4842-8220-dbe9d7b4499c)
+
+#### 4. Mengubah data suatu voucher yang memiliki id 2
+Request:
+- Method: PUT
+- URL: http://localhost:8080/vouchers/2
+- Headers: X-API-Key: villa-booking-api-key-2024
+- Body: json<br>
+{<br>
+   "code": "PROMO15",<br>
+    "description": "Diskon 15% untuk pengguna baru",<br>
+    "discount": 15.0,<br>
+    "startDate": "2025-07-01 00:00:00",<br>
+    "endDate": "2026-12-31 23:59:59"<br>
+}
+
+Dokumentasi:
+![Mengubah data suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/2fcbfabd-e215-49a8-968d-3934c7d6e017)
+
+#### 5. Menghapus suatu voucher yang memiliki id 2
+Request:
+- Method: DELETE
+- URL: http://localhost:8080/vouchers/2
+- Headers: X-API-Key: villa-booking-api-key-2024
+
+Dokumentasi:
+![Menghapus suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/767935a6-937f-437f-b1cd-55bfd4a2af08)
+
