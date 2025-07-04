@@ -308,6 +308,7 @@ Request:
 
 Dokumentasi:
 ![Menambahkan customer baru (registrasi customer)](https://github.com/user-attachments/assets/596d93d7-7b2c-4ee5-9c29-a721f764a641)
+Permintaan POST menambahkan data pelanggan baru. Nama "Ayu Wulandari", email "ayu@mail.com", nomor telepon "0811111111". Server merespons dengan status 201 Created dan pesan "Customer created successfully".
 
 #### 6. Customer melakukan pemesanan vila
 Request:
