@@ -238,6 +238,7 @@ Request:
 
 Dokumentasi:
 ![Menghapus kamar yang memiliki id 1 pada vila yang memiliki id 5](https://github.com/user-attachments/assets/6be0eace-5bbb-40bc-9af6-bb77990a0def)
+Gambar menunjukkan bahwa pengguna menghapus kamar dengan ID 1 dari villa ID 5 menggunakan metode DELETE ke endpoint http://localhost:8080/villas/5/rooms/1. Server merespons dengan status 200 OK dan pesan "Room deleted", yang berarti kamar berhasil dihapus dari sistem.
 
 #### 12. Menghapus suatu vila yang memiliki id 5
 Request:
