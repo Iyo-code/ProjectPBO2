@@ -201,6 +201,7 @@ Request:
 
 Dokumentasi:
 ![Mengubah data suatu vila yang memiliki id 5](https://github.com/user-attachments/assets/fd8d06df-13e5-4f3e-8006-bd27b0927e12)
+Gambar menunjukkan proses pembaruan data villa dengan ID 5 menggunakan metode PUT ke endpoint http://localhost:8080/villas/5. Data yang diperbarui meliputi nama, deskripsi, dan alamat villa. Server merespons dengan status 200 OK dan pesan "Villa updated successfully", yang berarti data berhasil diperbarui.
 
 #### 10. Mengubah informasi kamar yang memiliki id 1 pada vila yang memiliki id 5
 Request:
