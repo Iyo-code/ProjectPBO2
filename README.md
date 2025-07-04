@@ -270,6 +270,7 @@ Request:
 
 Dokumentasi:
 ![Informasi detail seorang customer yang memiliki id 1](https://github.com/user-attachments/assets/28927913-801b-4397-a553-a2759f2c8fbd)
+Gambar menunjukkan permintaan GET ke endpoint http://localhost:8080/customers/1 untuk mengambil data pelanggan dengan ID 1. Server merespons dengan status 200 OK dan menampilkan informasi pelanggan bernama Ayu Wulandari beserta email dan nomor telepon.
 
 #### 3. Daftar booking yang telah dilakukan oleh seorang customer yang memiliki id 2
 Request:
