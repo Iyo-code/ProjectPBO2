@@ -248,6 +248,7 @@ Request:
 
 Dokumentasi:
 ![Menghapus suatu vila yang memiliki id 5](https://github.com/user-attachments/assets/61ab5da7-f977-4157-b140-5a22f656c5af)
+Gambar menunjukkan proses penghapusan data villa dengan ID 5 menggunakan metode DELETE ke endpoint http://localhost:8080/villas/5. Server memberikan respon 200 OK dengan pesan "Villa deleted successfully", yang berarti villa berhasil dihapus dari sistem.
 
 ### Customer
 
