@@ -144,6 +144,7 @@ Request:
 
 Dokumentasi:
 ![Pencarian ketersediaan vila berdasarkan tanggal check-in dan checkout](https://github.com/user-attachments/assets/b2a62eea-66ae-444a-b15c-f4eee8647092)
+Gambar ini menunjukkan respon dari server terhadap permintaan GET ke endpoint http://localhost:8080/villas dengan parameter tanggal check-in dan check-out, yang menampilkan daftar villa yang masih tersedia pada rentang waktu 5 hingga 7 Juli 2025. Data yang ditampilkan berupa informasi villa seperti ID, nama, deskripsi singkat, dan alamat masing-masing, menandakan bahwa sistem berhasil memfilter villa berdasarkan ketersediaan tanggal.
 
 #### 7. Menambahkan data vila
 Request:
