@@ -365,6 +365,8 @@ Request:
 
 Dokumentasi:
 ![Mengubah seorang customer yang memiliki id 3](https://github.com/user-attachments/assets/d99ccc88-669e-4543-93f6-e83b3b0b0cb4)
+Gambar menunjukkan proses pembaruan data customer dengan ID 3 menggunakan metode **PUT** ke endpoint `http://localhost:8080/customers/3`. Data yang diperbarui meliputi nama (`"Citra Dewi Lestari"`), email (`"citra.lestari@example.com"`), dan nomor telepon (`"081234567899"`). Permintaan dikirim dalam format JSON dan server memberikan respons dengan status **200 OK** serta pesan **"Customer updated successfully"**, yang menunjukkan bahwa data customer berhasil diperbarui di sistem.
+
 
 #### 9. Menghapus seorang customer yang memiliki id 4
 Request:
@@ -374,6 +376,9 @@ Request:
 
 Dokumentasi:
 ![Menghapus seorang customer yang memiliki id 4](https://github.com/user-attachments/assets/39c406cc-275e-418b-bcc4-64687928965b)
+Gambar menunjukkan proses penghapusan data customer dengan ID 4 menggunakan metode **DELETE** ke endpoint `http://localhost:8080/customers/4`. Permintaan ini tidak memerlukan body karena hanya bertujuan untuk menghapus data. Setelah permintaan dikirim, server merespons dengan status **200 OK** dan pesan **"Customer deleted successfully"**, yang menandakan bahwa data customer berhasil dihapus dari sistem.
+
+
 
 ### Voucher
 
@@ -385,6 +390,8 @@ Request:
 
 Dokumentasi:
 ![Daftar semua vouchers](https://github.com/user-attachments/assets/94699da5-cbca-4f52-a715-c1ec61f1b971)
+Gambar menunjukkan proses pengambilan data voucher menggunakan metode **GET** ke endpoint `http://localhost:8080/vouchers`. Permintaan ini tidak membutuhkan parameter tambahan, dan hasil respons berupa daftar voucher dalam format JSON. Terdapat dua voucher yang ditampilkan: voucher pertama memiliki kode `"PROMO20"` dengan deskripsi diskon 20% untuk awal bulan, berlaku dari 1 Juli 2025 hingga 31 Juli 2025; sedangkan voucher kedua memiliki kode `"PROMO15"` dengan deskripsi diskon 15% untuk pengguna baru, berlaku dari 1 Juli 2025 hingga 1 Januari 2026. Server merespons dengan status **200 OK**, waktu respons cepat yaitu 11 ms, dan ukuran data sebesar 567 B, yang menunjukkan bahwa data berhasil diambil dengan efisien.
+
 
 #### 2. Informasi detail suatu voucher yang memiliki id 2
 Request:
@@ -395,6 +402,8 @@ Request:
 
 Dokumentasi:
 ![Informasi detail suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/8240849e-670f-4455-8f4d-8e0f7e8dab51)
+Gambar menunjukkan proses pengambilan detail data voucher dengan ID 2 menggunakan metode **GET** ke endpoint `http://localhost:8080/vouchers/2`. Respons yang diterima berupa data voucher dalam format JSON yang mencakup kode voucher `"PROMO15"`, deskripsi `"Diskon 15% untuk pengguna baru"`, nilai diskon sebesar 15%, serta periode berlaku dari tanggal **1 Juli 2025 pukul 00:00:00** hingga **1 Januari 2026 pukul 23:59:59**. Server merespons dengan status **200 OK**, waktu respons sangat cepat yaitu **10 ms**, dan ukuran data sebesar **413 B**, yang menandakan bahwa detail voucher berhasil diambil dengan sukses dan efisien.
+
 
 #### 3. Membuat voucher baru
 Request:
@@ -412,6 +421,8 @@ Request:
 
 Dokumentasi:
 ![Membuat voucher baru](https://github.com/user-attachments/assets/c007042f-f962-4842-8220-dbe9d7b4499c)
+Gambar menunjukkan proses pembuatan data voucher baru menggunakan metode **POST** ke endpoint `http://localhost:8080/vouchers`. Data dikirim dalam format JSON yang berisi kode voucher `"PROMO20"`, deskripsi `"Diskon 20% untuk awal bulan"`, besaran diskon sebesar 20%, serta periode aktif mulai dari **1 Juli 2025 pukul 00:00:00** hingga **31 Juli 2025 pukul 23:59:59**. Setelah permintaan dikirim, server memberikan respons dengan status **201 Created** dan pesan **"Voucher created successfully"**, yang menandakan bahwa data voucher berhasil ditambahkan ke dalam sistem.
+
 
 #### 4. Mengubah data suatu voucher yang memiliki id 2
 Request:
@@ -429,6 +440,8 @@ Request:
 
 Dokumentasi:
 ![Mengubah data suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/2fcbfabd-e215-49a8-968d-3934c7d6e017)
+Gambar menunjukkan proses pembaruan data voucher dengan ID 2 menggunakan metode **PUT** ke endpoint `http://localhost:8080/vouchers/2`. Data yang diperbarui dalam format JSON mencakup kode voucher `"PROMO15"`, deskripsi `"Diskon 15% untuk pengguna baru"`, nilai diskon sebesar 15%, serta periode aktif dari **1 Juli 2025 pukul 00:00:00** hingga **31 Desember 2026 pukul 23:59:59**. Setelah permintaan dikirim, server merespons dengan status **200 OK** dan pesan **"Voucher updated successfully"**, yang menandakan bahwa informasi voucher berhasil diperbarui dalam sistem.
+
 
 #### 5. Menghapus suatu voucher yang memiliki id 2
 Request:
@@ -438,4 +451,5 @@ Request:
 
 Dokumentasi:
 ![Menghapus suatu voucher yang memiliki id 2](https://github.com/user-attachments/assets/767935a6-937f-437f-b1cd-55bfd4a2af08)
+Gambar menunjukkan proses penghapusan voucher dengan ID 2 menggunakan metode **DELETE** ke endpoint `http://localhost:8080/vouchers/2`. Permintaan ini tidak membutuhkan body karena hanya bertujuan untuk menghapus data voucher dari sistem. Setelah permintaan dikirim, server merespons dengan status **200 OK** dan pesan **"Voucher deleted successfully"**, yang menandakan bahwa data voucher telah berhasil dihapus dari database.
 
