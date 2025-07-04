@@ -160,6 +160,7 @@ Request:
 
 Dokumentasi:
 ![Menambah data vila](https://github.com/user-attachments/assets/df524389-1e05-4f53-b30d-0ba0c553f795)
+Gambar tersebut menunjukkan bahwa pengguna mengirim data villa baru ke server menggunakan metode POST ke endpoint http://localhost:8080/villas melalui Postman. Data yang dikirim berisi nama, deskripsi, dan alamat villa. Server merespons dengan status 201 Created dan pesan "Villa created successfully", yang menandakan bahwa data berhasil ditambahkan.
 
 #### 8. Menambahkan tipe kamar pada vila yang memiliki id 1
 Request:
