@@ -114,6 +114,7 @@ Request:
 
 Dokumentasi:
 ![Informasi kamar suatu vila yang memiliki id 1, lengkap dengan fasilitas dan harga](https://github.com/user-attachments/assets/ad1cb687-1bf9-42bc-8bca-117bed5cf840)
+Gambar tersebut menunjukkan hasil request GET ke endpoint http://localhost:8080/villas/1/rooms menggunakan Postman, yang menampilkan detail kamar tipe Deluxe pada villa dengan ID 1, lengkap dengan kapasitas, harga, ukuran tempat tidur, serta fasilitas seperti AC, WiFi, TV, dan shower, namun tanpa kulkas.
 
 #### 4. Daftar semua booking pada suatu vila yang memiliki id 1
 Request:
