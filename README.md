@@ -337,6 +337,8 @@ Request:
 
 Dokumentasi:
 ![Customer memberikan ulasan pada vila (berdasarkan informasi booking)](https://github.com/user-attachments/assets/6f282cb5-0e71-43c2-8f55-da83d720bd0f)
+Gambar menunjukkan proses pembuatan ulasan oleh customer dengan ID 1 untuk booking ID 1 menggunakan metode POST ke endpoint `http://localhost:8080/customers/1/bookings/1/reviews`. Data yang dikirim berupa JSON yang berisi ID booking, rating bintang (5), judul ulasan “Sangat Memuaskan!”, dan isi ulasan yang menggambarkan pengalaman positif selama menginap. Setelah permintaan dikirim, server merespons dengan status **201 Created** dan pesan **"Review created"**, yang menandakan bahwa ulasan berhasil dibuat dan disimpan di sistem.
+
 
 #### 8. Mengubah seorang customer yang memiliki id 3
 Request:
