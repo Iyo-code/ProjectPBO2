@@ -260,6 +260,7 @@ Request:
 
 Dokumentasi:
 ![Daftar semua customer](https://github.com/user-attachments/assets/f7ec20ea-0b43-4ad5-a9b9-68be844a96b5)
+Gambar menunjukkan permintaan GET ke endpoint http://localhost:8080/customers untuk mengambil data seluruh pelanggan. Respons berhasil dengan status 200 OK, dan data yang ditampilkan mencakup beberapa pelanggan, masing-masing berisi informasi id, nama, email, dan nomor telepon. Terdapat data duplikat untuk pelanggan bernama Citra Dewi.
 
 #### 2. Informasi detail seorang customer yang memiliki id 1
 Request:
