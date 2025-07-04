@@ -124,6 +124,7 @@ Request:
 
 Dokumentasi:
 ![Daftar semua booking pada suatu vila yang memiliki id 1](https://github.com/user-attachments/assets/9a28c6f6-027f-4414-bc48-8994ba070e37)
+Gambar ini memperlihatkan respon dari server berupa data pemesanan kamar villa melalui endpoint tertentu, yang mencakup detail seperti identitas pelanggan, waktu menginap, total pembayaran setelah potongan voucher, serta konfirmasi bahwa transaksi berhasil dan tamu telah menyelesaikan proses check-in maupun check-out.
 
 #### 5. Daftar semua review pada suatu vila yang memiliki id 2
 Request:
