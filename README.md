@@ -291,6 +291,8 @@ Request:
 
 Dokumentasi:
 ![Daftar ulasan yang telah diberikan oleh customer yang memiliki id 3](https://github.com/user-attachments/assets/9778663b-669a-46d5-b1f8-78a6e1dd18eb)
+Permintaan GET menampilkan data ulasan pelanggan ID 3.
+Booking ID 3, beri rating 3 bintang, judul "Biasa saja", isi ulasan: lokasi strategis, tapi AC kurang dingin dan kamar agak gelap.
 
 #### 5. Menambahkan customer baru (registrasi customer)
 Request:
