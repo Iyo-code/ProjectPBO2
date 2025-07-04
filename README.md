@@ -331,6 +331,7 @@ Request:
 
 Dokumentasi:
 ![Customer melakukan pemesanan vila](https://github.com/user-attachments/assets/760bcab4-6526-4bf9-aadc-ddbae1217043)
+Permintaan POST menambahkan data pemesanan untuk customer ID 1. Tipe kamar ID 1, check-in pada 5 Juli 2025 pukul 14:00 dan check-out pada 7 Juli 2025 pukul 12:00. Harga awal Rp1.400.000, menggunakan voucher ID 1 sehingga harga akhir menjadi Rp1.120.000. Status pembayaran "success", pelanggan sudah check-in dan check-out. Server merespons dengan status 201 Created dan pesan "Booking created".
 
 #### 7. Customer memberikan ulasan pada vila (berdasarkan informasi booking)
 Request:
