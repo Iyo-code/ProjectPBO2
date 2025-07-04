@@ -228,6 +228,7 @@ Request:
 
 Dokumentasi:
 ![Mengubah informasi kamar yang memiliki id 1 pada vila yang memiliki id 5](https://github.com/user-attachments/assets/e455dea9-cc07-4b47-b6e7-357074db1261)
+Gambar menunjukkan proses pembaruan data kamar dengan ID 1 milik villa ID 5 melalui metode PUT ke endpoint http://localhost:8080/villas/5/rooms/1. Data kamar diperbarui, termasuk ukuran tempat tidur dan fasilitas seperti AC, TV, WiFi, shower, air panas, dan kulkas. Server merespons dengan status 200 OK dan pesan "Room updated", yang berarti perubahan berhasil disimpan.
 
 #### 11. Menghapus kamar yang memiliki id 1 pada vila yang memiliki id 5
 Request:
