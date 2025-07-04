@@ -104,6 +104,7 @@ Request:
 
 Dokumentasi:
 ![Informasi detail suatu vila pada vila yang memiliki id 2](https://github.com/user-attachments/assets/22e111d4-0f8f-4964-8364-a51422ff26c6)
+Gambar tersebut menunjukkan bahwa pengguna menggunakan aplikasi Postman untuk mengakses endpoint http://localhost:8080/villas/2 dengan metode GET, yang menghasilkan respon data detail dari villa bernama "Villa Teratai", berupa objek JSON yang memuat informasi id, nama, deskripsi villa modern dengan kolam renang pribadi, serta alamat di Jl. Tirta No.2, yang menandakan bahwa sistem API berhasil mengembalikan data spesifik berdasarkan ID yang diminta.
 
 #### 3. Informasi kamar suatu vila yang memiliki id 1, lengkap dengan fasilitas dan harga
 Request:
