@@ -185,6 +185,7 @@ Request:
 
 Dokumentasi:
 ![Menambahkan tipe kamar pada vila yang memiliki id 1](https://github.com/user-attachments/assets/c522a069-b5f4-4ece-8da8-c31aa0c868e0)
+Gambar tersebut menunjukkan bahwa pengguna berhasil menambahkan kamar baru bertipe Deluxe ke villa dengan ID 1 melalui metode POST ke endpoint http://localhost:8080/villas/1/rooms. Data kamar mencakup kapasitas, harga, ukuran tempat tidur, dan berbagai fasilitas. Server merespons dengan status 201 Created dan pesan "Room created", yang menandakan data berhasil disimpan.
 
 #### 9. Mengubah data suatu vila yang memiliki id 5
 Request:
