@@ -280,6 +280,8 @@ Request:
 
 Dokumentasi:
 ![Daftar booking yang telah dilakukan oleh seorang customer yang memiliki id 2](https://github.com/user-attachments/assets/5ab1d733-ba96-4c1d-afc8-e104e92eb794)
+Permintaan GET menampilkan data booking pelanggan ID 2.
+Pemesanan kamar ID 2, check-in 10 Juli 2025, check-out 12 Juli 2025, harga Rp1.600.000, pembayaran sukses, sudah check-in, belum check-out, tanpa voucher.
 
 #### 4. Daftar ulasan yang telah diberikan oleh customer yang memiliki id 3
 Request:
