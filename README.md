@@ -134,6 +134,7 @@ Request:
 
 Dokumentasi:
 ![Daftar semua review pada suatu vila yang memiliki id 2](https://github.com/user-attachments/assets/26defe1a-5da3-4698-a065-f7742f3eb5b2)
+Gambar ini menunjukkan respon dari server terhadap permintaan GET ke endpoint http://localhost:8080/villas/2/reviews, yang berisi ulasan dari pengguna terhadap villa dengan ID 2. Data yang ditampilkan mencakup ID pemesanan terkait (booking: 2), rating bintang sebesar 4, judul ulasan "Nyaman dan tenang", serta isi ulasan yang menyatakan bahwa fasilitas dan suasana villa sangat baik, meskipun ada sedikit kekurangan pada area parkir.
 
 #### 6. Pencarian ketersediaan vila berdasarkan tanggal check-in dan checkout
 Request:
