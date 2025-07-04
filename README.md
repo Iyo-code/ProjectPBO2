@@ -94,6 +94,7 @@ Request:
 
 Dokumentasi:
 ![Daftar semua vila](https://github.com/user-attachments/assets/c8032ce0-17c7-4b53-9088-fcbd4703bd29)
+Gambar tersebut menampilkan hasil permintaan data menggunakan metode GET pada aplikasi Postman yang mengakses endpoint http://localhost:8080/villas, di mana ditampilkan respon berupa daftar villa dalam format JSON lengkap dengan id, nama, deskripsi, dan alamat, yang menunjukkan bahwa API berjalan dengan baik dan berhasil mengembalikan data dari server lokal.
 
 #### 2. Informasi detail suatu vila pada vila yang memiliki id 2
 Request:
